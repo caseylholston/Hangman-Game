@@ -68,7 +68,7 @@ console.log("This is the javascript file");
 
 
 
-    //Check game conditions
+    //Check to see if game is over or won
     
     
    	var finished = true;
