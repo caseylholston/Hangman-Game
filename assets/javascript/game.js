@@ -20,8 +20,12 @@ console.log("This is the javascript file");
 	//Convert Current Word into Blanks
 
 	for(i=0; i < currentWord.length; i++) {
-		maskedWord[i] = "_"		
+		maskedWord[i] = "_ "		
 	}
+
+	var targetDiv = document.getElementById("currentWord");
+
+      targetDiv.innerHTML = maskedWord;
 
 
 // When the user presses a key, it will run the following function...
@@ -30,7 +34,9 @@ console.log("This is the javascript file");
 // Determine which key was pressed	
 	var currentGuess = event.key;
 	
+	var targetDiv = document.getElementById("guesses");
 
+    targetDiv.innerHTML = lettersGuessed + " ";
 
 	
 	console.log(currentGuess);
@@ -42,6 +48,9 @@ console.log("This is the javascript file");
 			
 		}
 		else correctGuess =false;
+		var targetDiv = document.getElementById("currentWord");
+
+      	targetDiv.innerHTML = maskedWord;
 
 
 		// guessesMade++;
@@ -50,6 +59,10 @@ console.log("This is the javascript file");
 	lettersGuessed.push(currentGuess);
 	guessesLeft--;
 	guessesMade++;
+
+	var targetDiv = document.getElementById("guessesLeft");
+
+    targetDiv.innerHTML = guessesLeft;
 
 
 
