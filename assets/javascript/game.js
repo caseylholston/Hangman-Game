@@ -29,18 +29,27 @@ console.log("This is the javascript file");
 
 // Determine which key was pressed	
 	var currentGuess = event.key;
-	lettersGuessed.push(currentGuess);
+	
 
-	var guessesLeft = (12-(lettersGuessed.length))
+
+	
 	console.log(currentGuess);
 
 	for (var i = 0; i < currentWord.length; i++){
 		if(currentWord[i] === currentGuess){
 			maskedWord[i] = currentGuess + " ";
 			var correctGuess = true;
+			
 		}
-		else if (currentGuess = "");
+		else correctGuess =false;
+
+
+		// guessesMade++;
+		// guessesLeft--;	
 	}
+	lettersGuessed.push(currentGuess);
+	guessesLeft--;
+	guessesMade++;
 
 
 
